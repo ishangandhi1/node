@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %title ToDo
+    = stylesheet_link_tag "application", media: "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    .row-fluid
+      .span10.offset1
+        .hero-unit.text-center
+          %h1
+            ToDo
+          %p
+            Welcome to your Reminder Application
+          = link_to 'New Task', new_task_path, class: 'btn btn-primary', remote: true
+    = yield
+
+
+
