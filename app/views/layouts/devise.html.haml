@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title ToDo
+    %title todo
     = stylesheet_link_tag "application", media: "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
@@ -13,13 +13,6 @@
             ToDo
           %p
             Welcome to your Reminder Application
-          .text-center
-            = link_to 'New Task', new_task_path, class: 'btn btn-primary', remote: true
-          .text-center
-            %strong= current_user.email
-          .text-center
-            = link_to 'logout', destroy_user_session_path, method: :delete
-    = yield
-
-
-
+    .row-fluid
+      .span4.offset4
+        = yield

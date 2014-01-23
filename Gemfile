@@ -31,6 +31,8 @@ gem 'bootstrap-sass-rails','~>2.3.2.1'
 gem 'haml'
 gem 'simple_form'
 gem 'bootstrap-datepicker-rails'
+gem 'devise'
+gem 'cancan'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
