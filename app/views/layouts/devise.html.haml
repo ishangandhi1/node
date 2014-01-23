@@ -1,11 +1,11 @@
 !!!
-%html{ :style => "height: 100%; margin: 0px; padding: 0px;"}
+%html
   %head
     %title todo
     = stylesheet_link_tag "application", media: "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
-  %body{ :style => "height: 100%; margin: 0px; padding: 0px;"}
+  %body
     .row-fluid
       .span10.offset1
         .hero-unit.text-center
@@ -15,9 +15,8 @@
             Welcome to your Reminder Application
     .row-fluid
       .span4.offset4
-        %div{ :style => "height: 100%;"}
-          = yield
-  %div{ :style => "margin-bottom:0px;"}
+        = yield
+  %div
     %h5.text-center
       Application Developed by
       = link_to 'https://www.facebook.com/ishan070692' do
