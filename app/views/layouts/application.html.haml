@@ -1,12 +1,11 @@
 !!!
-%html
+%html{ :style => "height: 100%; margin: 0px; padding: 0px;"}
   %head
     %title ToDo
     = stylesheet_link_tag "application", media: "all"
-    %link{:href=>"//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css", :rel=>"stylesheet"}
     = javascript_include_tag "application"
     = csrf_meta_tags
-  %body
+  %body{ :style => "height: 100%; margin: 0px; padding: 0px;"}
     .row-fluid
       .span10.offset1
         .hero-unit.text-center
@@ -20,9 +19,10 @@
             %strong= current_user.email
           .text-center
             = link_to 'logout', destroy_user_session_path, method: :delete
+    %div{ :style => "height: 100%;"}
       = yield
 
-  %div
+  %div{ :style => "margin-bottom:0px;"}
     %h5.text-center
       Application Developed by
       = link_to 'https://www.facebook.com/ishan070692' do
